@@ -1,0 +1,59 @@
+{
+  "data": {
+    "nodeHomepages": {
+      "__typename": "NodeHomepageConnection",
+      "nodes": [
+        {
+          "__typename": "NodeHomepage",
+          "id": "homepage",
+          "title": "Forge & Fabricate Makerspace",
+          "path": "/homepage",
+          "heroTitle": "Build Anything You Can Imagine",
+          "heroSubtitle": "Forge & Fabricate Makerspace",
+          "heroDescription": {
+            "processed": "<p>A community workshop where makers, tinkerers, artists, and inventors come together to create. Access professional-grade tools, learn new skills, and bring your ideas to life.</p>",
+            "summary": "A community workshop where makers, tinkerers, artists, and inventors come together to create. Access professional-grade tools, learn new skills, and bring your ideas to life."
+          },
+          "statsItems": [
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-members",
+              "title": "",
+              "number": "400+",
+              "label": "Active Members"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-tools",
+              "title": "",
+              "number": "75+",
+              "label": "Tools & Machines"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-workshops",
+              "title": "",
+              "number": "100+",
+              "label": "Annual Workshops"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-sqft",
+              "title": "",
+              "number": "8,000",
+              "label": "Sq Ft of Workshop Space"
+            }
+          ],
+          "featuredItemsTitle": "Upcoming Workshops",
+          "ctaTitle": "Start Making Today",
+          "ctaDescription": {
+            "processed": "<p>Tour the space, meet our community, and discover what you can create. First-time visitors get a free day pass to explore all our workshops.</p>",
+            "summary": "Tour the space, meet our community, and discover what you can create. First-time visitors get a free day pass to explore all our workshops."
+          },
+          "ctaPrimary": "Get a Day Pass",
+          "ctaSecondary": "View Workshops"
+        }
+      ]
+    }
+  }
+}

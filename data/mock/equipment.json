@@ -1,0 +1,129 @@
+{
+  "data": {
+    "nodeEquipments": {
+      "__typename": "NodeEquipmentConnection",
+      "nodes": [
+        {
+          "__typename": "NodeEquipment",
+          "id": "equipment-laser",
+          "title": "CO2 Laser Cutter",
+          "path": "/equipment/laser-cutter",
+          "body": {
+            "processed": "<p>Our 60W CO2 laser cutter handles precision cutting and engraving on wood, acrylic, leather, fabric, paper, and more. The 24x36 inch bed accommodates a wide range of project sizes, from jewelry to signage.</p><h2>Capabilities</h2><ul><li>Cuts wood up to 1/4 inch, acrylic up to 3/8 inch</li><li>High-detail engraving at up to 1000 DPI</li><li>Built-in camera for precise alignment</li><li>Compatible with SVG, DXF, and bitmap files</li></ul><h2>Safety</h2><p>Certification workshop required before first use. The laser cutter must never be left unattended while running.</p>",
+            "summary": "Our 60W CO2 laser cutter handles precision cutting and engraving on wood, acrylic, leather, fabric, paper, and more. The 24x36 inch bed accommodates a wide range of project sizes, from jewelry to sign"
+          },
+          "equipmentCategory": "Digital Fabrication",
+          "brandModel": "Epilog Fusion Pro 32",
+          "certificationRequired": true,
+          "availabilityHours": "Open hours, reservation recommended",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800&q=80",
+            "alt": "Laser cutter engraving wood",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeEquipment",
+          "id": "equipment-cnc",
+          "title": "CNC Router",
+          "path": "/equipment/cnc-router",
+          "body": {
+            "processed": "<p>A full-size 4x8 foot CNC router for precision milling of wood, plastics, foam, and soft metals. Ideal for furniture components, signage, prototypes, and artistic pieces.</p><h2>Specifications</h2><ul><li>48 x 96 inch cutting area</li><li>3 HP spindle, variable speed</li><li>Vacuum hold-down table</li><li>Dust collection system</li><li>Compatible with VCarve, Fusion 360, and other CAM software</li></ul><h2>Requirements</h2><p>CNC certification workshop required. Members must submit toolpath files for review before first independent use.</p>",
+            "summary": "A full-size 4x8 foot CNC router for precision milling of wood, plastics, foam, and soft metals. Ideal for furniture components, signage, prototypes, and artistic pieces.Specifications48 x 96 inch cutt"
+          },
+          "equipmentCategory": "Digital Fabrication",
+          "brandModel": "ShopBot PRSalpha",
+          "certificationRequired": true,
+          "availabilityHours": "By reservation only",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80",
+            "alt": "CNC router cutting wood",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeEquipment",
+          "id": "equipment-3dprinter",
+          "title": "3D Printers",
+          "path": "/equipment/3d-printers",
+          "body": {
+            "processed": "<p>A fleet of six 3D printers covering both FDM and resin technologies. From rapid prototyping to high-detail miniatures, our 3D printing lab has the right machine for your project.</p><h2>Available Printers</h2><ul><li><strong>Prusa MK4 (4x):</strong> Reliable FDM printing in PLA, PETG, ABS, and flexibles</li><li><strong>Bambu Lab X1 Carbon (1x):</strong> Multi-material FDM with carbon fiber capability</li><li><strong>Formlabs Form 3+ (1x):</strong> High-detail SLA resin printing</li></ul><h2>Getting Started</h2><p>A brief orientation is required for first-time users. Filament is available for purchase at cost. Resin printing uses a per-mL usage fee.</p>",
+            "summary": "A fleet of six 3D printers covering both FDM and resin technologies. From rapid prototyping to high-detail miniatures, our 3D printing lab has the right machine for your project.Available PrintersPrus"
+          },
+          "equipmentCategory": "Digital Fabrication",
+          "brandModel": "Multiple (Prusa, Bambu Lab, Formlabs)",
+          "certificationRequired": false,
+          "availabilityHours": "Open hours, first-come first-served",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+            "alt": "3D printers in the makerspace lab",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

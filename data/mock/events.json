@@ -1,0 +1,141 @@
+{
+  "data": {
+    "nodeEvents": {
+      "__typename": "NodeEventConnection",
+      "nodes": [
+        {
+          "__typename": "NodeEvent",
+          "id": "event-maker-faire",
+          "title": "Mini Maker Faire",
+          "path": "/events/mini-maker-faire",
+          "body": {
+            "processed": "<p>Our annual Mini Maker Faire is the biggest event of the year! Local makers, artists, and inventors showcase their projects, run live demonstrations, and inspire the next generation of creators. Free admission and activities for all ages.</p><h2>What to Expect</h2><ul><li>50+ maker exhibits and demonstrations</li><li>Hands-on activity stations for kids</li><li>Live 3D printing and laser cutting demos</li><li>Robot battles and drone racing</li><li>Food trucks and maker market</li></ul>",
+            "summary": "Our annual Mini Maker Faire is the biggest event of the year! Local makers, artists, and inventors showcase their projects, run live demonstrations, and inspire the next generation of creators. Free a"
+          },
+          "eventDate": {
+            "timestamp": 1781449200
+          },
+          "endDate": {
+            "timestamp": 1781474400
+          },
+          "location": "Forge & Fabricate Makerspace (indoor and outdoor)",
+          "openToPublic": true,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+            "alt": "Maker faire with exhibits and demonstrations",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeEvent",
+          "id": "event-open-house",
+          "title": "Monthly Open House",
+          "path": "/events/open-house-april",
+          "body": {
+            "processed": "<p>Curious about the makerspace? Join us for our monthly open house. Tour the facility, meet current members, try out some tools, and ask any questions about membership. Refreshments provided.</p><p>No registration needed. Just drop in anytime between 2 and 5 PM.</p>",
+            "summary": "Curious about the makerspace? Join us for our monthly open house. Tour the facility, meet current members, try out some tools, and ask any questions about membership. Refreshments provided.No registra"
+          },
+          "eventDate": {
+            "timestamp": 1775415600
+          },
+          "endDate": {
+            "timestamp": 1775426400
+          },
+          "location": "Forge & Fabricate Makerspace",
+          "openToPublic": true,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+            "alt": "Makerspace tour during open house",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeEvent",
+          "id": "event-hackathon",
+          "title": "24-Hour Hardware Hackathon",
+          "path": "/events/hardware-hackathon",
+          "body": {
+            "processed": "<p>Design, build, and present a working hardware prototype in just 24 hours. Teams of 2-4 compete for prizes using any tools and materials in the makerspace. Arduino, Raspberry Pi, and electronic components provided.</p><h2>Prizes</h2><ul><li>1st Place: $500 and 6-month membership</li><li>2nd Place: $250 and 3-month membership</li><li>Best Design: 3-month membership</li></ul><p>Registration required. $25 per person ($15 for members) includes meals and snacks.</p>",
+            "summary": "Design, build, and present a working hardware prototype in just 24 hours. Teams of 2-4 compete for prizes using any tools and materials in the makerspace. Arduino, Raspberry Pi, and electronic compone"
+          },
+          "eventDate": {
+            "timestamp": 1778950800
+          },
+          "endDate": {
+            "timestamp": 1779044400
+          },
+          "location": "Forge & Fabricate Makerspace",
+          "openToPublic": false,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&q=80",
+            "alt": "Hardware hackathon with electronics",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

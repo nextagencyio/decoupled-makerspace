@@ -1,0 +1,295 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "Makerspace landing page with hero, stats, and call to action",
+      "fields": [
+        { "id": "hero_title", "label": "Hero Title", "type": "string" },
+        { "id": "hero_subtitle", "label": "Hero Subtitle", "type": "string" },
+        { "id": "hero_description", "label": "Hero Description", "type": "text" },
+        { "id": "stats_items", "label": "Statistics", "type": "paragraph(stat_item)[]" },
+        { "id": "featured_items_title", "label": "Featured Items Title", "type": "string" },
+        { "id": "cta_title", "label": "CTA Title", "type": "string" },
+        { "id": "cta_description", "label": "CTA Description", "type": "text" },
+        { "id": "cta_primary", "label": "Primary CTA", "type": "string" },
+        { "id": "cta_secondary", "label": "Secondary CTA", "type": "string" }
+      ]
+    },
+    {
+      "bundle": "workshop",
+      "label": "Workshop",
+      "description": "Educational workshop or class",
+      "body": true,
+      "fields": [
+        { "id": "workshop_date", "label": "Workshop Date", "type": "datetime" },
+        { "id": "duration", "label": "Duration", "type": "string" },
+        { "id": "skill_level", "label": "Skill Level", "type": "string" },
+        { "id": "instructor_name", "label": "Instructor", "type": "string" },
+        { "id": "price", "label": "Price", "type": "string" },
+        { "id": "max_participants", "label": "Max Participants", "type": "string" },
+        { "id": "image", "label": "Workshop Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "equipment",
+      "label": "Equipment",
+      "description": "Makerspace tool or equipment",
+      "body": true,
+      "fields": [
+        { "id": "equipment_category", "label": "Category", "type": "string" },
+        { "id": "brand_model", "label": "Brand & Model", "type": "string" },
+        { "id": "certification_required", "label": "Certification Required", "type": "bool" },
+        { "id": "availability_hours", "label": "Availability", "type": "string" },
+        { "id": "image", "label": "Equipment Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "event",
+      "label": "Community Event",
+      "description": "Makerspace community event",
+      "body": true,
+      "fields": [
+        { "id": "event_date", "label": "Event Date", "type": "datetime" },
+        { "id": "end_date", "label": "End Date", "type": "datetime" },
+        { "id": "location", "label": "Location", "type": "string" },
+        { "id": "open_to_public", "label": "Open to Public", "type": "bool" },
+        { "id": "image", "label": "Event Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static content page",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "stat_item",
+      "label": "Statistic Item",
+      "description": "A key statistic with number and label",
+      "fields": [
+        { "id": "number", "label": "Number", "type": "string!" },
+        { "id": "label", "label": "Label", "type": "string!" }
+      ]
+    }
+  ],
+  "taxonomies": [],
+  "content": [
+    {
+      "id": "stat-members",
+      "type": "paragraph.stat_item",
+      "values": { "number": "400+", "label": "Active Members" }
+    },
+    {
+      "id": "stat-tools",
+      "type": "paragraph.stat_item",
+      "values": { "number": "75+", "label": "Tools & Machines" }
+    },
+    {
+      "id": "stat-workshops",
+      "type": "paragraph.stat_item",
+      "values": { "number": "100+", "label": "Annual Workshops" }
+    },
+    {
+      "id": "stat-sqft",
+      "type": "paragraph.stat_item",
+      "values": { "number": "8,000", "label": "Sq Ft of Workshop Space" }
+    },
+    {
+      "id": "homepage",
+      "type": "node.homepage",
+      "path": "/homepage",
+      "values": {
+        "title": "Forge & Fabricate Makerspace",
+        "hero_title": "Build Anything You Can Imagine",
+        "hero_subtitle": "Forge & Fabricate Makerspace",
+        "hero_description": "<p>A community workshop where makers, tinkerers, artists, and inventors come together to create. Access professional-grade tools, learn new skills, and bring your ideas to life.</p>",
+        "stats_items": ["@stat-members", "@stat-tools", "@stat-workshops", "@stat-sqft"],
+        "featured_items_title": "Upcoming Workshops",
+        "cta_title": "Start Making Today",
+        "cta_description": "<p>Tour the space, meet our community, and discover what you can create. First-time visitors get a free day pass to explore all our workshops.</p>",
+        "cta_primary": "Get a Day Pass",
+        "cta_secondary": "View Workshops"
+      }
+    },
+    {
+      "id": "workshop-woodworking",
+      "type": "node.workshop",
+      "path": "/workshops/intro-to-woodworking",
+      "values": {
+        "title": "Introduction to Woodworking",
+        "body": "<p>Learn the fundamentals of woodworking in this hands-on beginner workshop. You will learn to safely operate the table saw, miter saw, drill press, and hand tools while building a solid wood cutting board to take home.</p><h2>What You Will Learn</h2><ul><li>Wood selection and grain direction</li><li>Safe operation of power tools</li><li>Measuring, marking, and cutting techniques</li><li>Gluing, clamping, and finishing</li></ul><p>All materials are included. No experience necessary. Closed-toe shoes required.</p>",
+        "workshop_date": "2026-04-12T10:00:00",
+        "duration": "4 hours",
+        "skill_level": "Beginner",
+        "instructor_name": "Tom Hendricks",
+        "price": "$75 (members $55)",
+        "max_participants": "8",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=80",
+          "alt": "Woodworking workshop with hand tools"
+        }
+      }
+    },
+    {
+      "id": "workshop-3dprint",
+      "type": "node.workshop",
+      "path": "/workshops/3d-printing-fundamentals",
+      "values": {
+        "title": "3D Printing Fundamentals",
+        "body": "<p>Demystify 3D printing from design to finished object. This workshop covers 3D modeling basics in TinkerCAD and Fusion 360, slicer settings, filament selection, and machine operation. You will design and print your own creation to take home.</p><h2>Topics Covered</h2><ul><li>Overview of FDM and resin printing</li><li>3D modeling with TinkerCAD (beginner-friendly)</li><li>Slicing software and print settings</li><li>Troubleshooting common print failures</li><li>Post-processing and finishing techniques</li></ul><p>Bring a laptop if you have one (we have loaners available).</p>",
+        "workshop_date": "2026-04-19T13:00:00",
+        "duration": "3 hours",
+        "skill_level": "Beginner",
+        "instructor_name": "Aisha Patel",
+        "price": "$55 (members $40)",
+        "max_participants": "10",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+          "alt": "3D printer creating an object"
+        }
+      }
+    },
+    {
+      "id": "workshop-welding",
+      "type": "node.workshop",
+      "path": "/workshops/mig-welding-basics",
+      "values": {
+        "title": "MIG Welding Basics",
+        "body": "<p>Get hands-on with MIG welding in this introductory workshop. Learn proper safety procedures, machine setup, and fundamental welding techniques. By the end of class, you will be running consistent beads and completing simple joint welds.</p><h2>What to Expect</h2><ul><li>Safety gear fitting and PPE review</li><li>Machine anatomy and setup</li><li>Flat position welding practice</li><li>Butt joints and T-joints</li><li>Grinding and finishing</li></ul><p>All safety equipment and materials provided. Long pants and closed-toe boots required. Minimum age 16.</p>",
+        "workshop_date": "2026-05-03T09:00:00",
+        "duration": "5 hours",
+        "skill_level": "Beginner",
+        "instructor_name": "Carlos Mendez",
+        "price": "$95 (members $75)",
+        "max_participants": "6",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+          "alt": "MIG welding sparks"
+        }
+      }
+    },
+    {
+      "id": "equipment-laser",
+      "type": "node.equipment",
+      "path": "/equipment/laser-cutter",
+      "values": {
+        "title": "CO2 Laser Cutter",
+        "body": "<p>Our 60W CO2 laser cutter handles precision cutting and engraving on wood, acrylic, leather, fabric, paper, and more. The 24x36 inch bed accommodates a wide range of project sizes, from jewelry to signage.</p><h2>Capabilities</h2><ul><li>Cuts wood up to 1/4 inch, acrylic up to 3/8 inch</li><li>High-detail engraving at up to 1000 DPI</li><li>Built-in camera for precise alignment</li><li>Compatible with SVG, DXF, and bitmap files</li></ul><h2>Safety</h2><p>Certification workshop required before first use. The laser cutter must never be left unattended while running.</p>",
+        "equipment_category": "Digital Fabrication",
+        "brand_model": "Epilog Fusion Pro 32",
+        "certification_required": true,
+        "availability_hours": "Open hours, reservation recommended",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800&q=80",
+          "alt": "Laser cutter engraving wood"
+        }
+      }
+    },
+    {
+      "id": "equipment-cnc",
+      "type": "node.equipment",
+      "path": "/equipment/cnc-router",
+      "values": {
+        "title": "CNC Router",
+        "body": "<p>A full-size 4x8 foot CNC router for precision milling of wood, plastics, foam, and soft metals. Ideal for furniture components, signage, prototypes, and artistic pieces.</p><h2>Specifications</h2><ul><li>48 x 96 inch cutting area</li><li>3 HP spindle, variable speed</li><li>Vacuum hold-down table</li><li>Dust collection system</li><li>Compatible with VCarve, Fusion 360, and other CAM software</li></ul><h2>Requirements</h2><p>CNC certification workshop required. Members must submit toolpath files for review before first independent use.</p>",
+        "equipment_category": "Digital Fabrication",
+        "brand_model": "ShopBot PRSalpha",
+        "certification_required": true,
+        "availability_hours": "By reservation only",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80",
+          "alt": "CNC router cutting wood"
+        }
+      }
+    },
+    {
+      "id": "equipment-3dprinter",
+      "type": "node.equipment",
+      "path": "/equipment/3d-printers",
+      "values": {
+        "title": "3D Printers",
+        "body": "<p>A fleet of six 3D printers covering both FDM and resin technologies. From rapid prototyping to high-detail miniatures, our 3D printing lab has the right machine for your project.</p><h2>Available Printers</h2><ul><li><strong>Prusa MK4 (4x):</strong> Reliable FDM printing in PLA, PETG, ABS, and flexibles</li><li><strong>Bambu Lab X1 Carbon (1x):</strong> Multi-material FDM with carbon fiber capability</li><li><strong>Formlabs Form 3+ (1x):</strong> High-detail SLA resin printing</li></ul><h2>Getting Started</h2><p>A brief orientation is required for first-time users. Filament is available for purchase at cost. Resin printing uses a per-mL usage fee.</p>",
+        "equipment_category": "Digital Fabrication",
+        "brand_model": "Multiple (Prusa, Bambu Lab, Formlabs)",
+        "certification_required": false,
+        "availability_hours": "Open hours, first-come first-served",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+          "alt": "3D printers in the makerspace lab"
+        }
+      }
+    },
+    {
+      "id": "event-maker-faire",
+      "type": "node.event",
+      "path": "/events/mini-maker-faire",
+      "values": {
+        "title": "Mini Maker Faire",
+        "body": "<p>Our annual Mini Maker Faire is the biggest event of the year! Local makers, artists, and inventors showcase their projects, run live demonstrations, and inspire the next generation of creators. Free admission and activities for all ages.</p><h2>What to Expect</h2><ul><li>50+ maker exhibits and demonstrations</li><li>Hands-on activity stations for kids</li><li>Live 3D printing and laser cutting demos</li><li>Robot battles and drone racing</li><li>Food trucks and maker market</li></ul>",
+        "event_date": "2026-06-14T10:00:00",
+        "end_date": "2026-06-14T17:00:00",
+        "location": "Forge & Fabricate Makerspace (indoor and outdoor)",
+        "open_to_public": true,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+          "alt": "Maker faire with exhibits and demonstrations"
+        }
+      }
+    },
+    {
+      "id": "event-open-house",
+      "type": "node.event",
+      "path": "/events/open-house-april",
+      "values": {
+        "title": "Monthly Open House",
+        "body": "<p>Curious about the makerspace? Join us for our monthly open house. Tour the facility, meet current members, try out some tools, and ask any questions about membership. Refreshments provided.</p><p>No registration needed. Just drop in anytime between 2 and 5 PM.</p>",
+        "event_date": "2026-04-05T14:00:00",
+        "end_date": "2026-04-05T17:00:00",
+        "location": "Forge & Fabricate Makerspace",
+        "open_to_public": true,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+          "alt": "Makerspace tour during open house"
+        }
+      }
+    },
+    {
+      "id": "event-hackathon",
+      "type": "node.event",
+      "path": "/events/hardware-hackathon",
+      "values": {
+        "title": "24-Hour Hardware Hackathon",
+        "body": "<p>Design, build, and present a working hardware prototype in just 24 hours. Teams of 2-4 compete for prizes using any tools and materials in the makerspace. Arduino, Raspberry Pi, and electronic components provided.</p><h2>Prizes</h2><ul><li>1st Place: $500 and 6-month membership</li><li>2nd Place: $250 and 3-month membership</li><li>Best Design: 3-month membership</li></ul><p>Registration required. $25 per person ($15 for members) includes meals and snacks.</p>",
+        "event_date": "2026-05-16T12:00:00",
+        "end_date": "2026-05-17T14:00:00",
+        "location": "Forge & Fabricate Makerspace",
+        "open_to_public": false,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&q=80",
+          "alt": "Hardware hackathon with electronics"
+        }
+      }
+    },
+    {
+      "id": "page-about",
+      "type": "node.page",
+      "path": "/about",
+      "values": {
+        "title": "About Forge & Fabricate",
+        "body": "<p>Forge & Fabricate Makerspace opened in 2018 as a community workshop where anyone can access professional-grade tools and learn hands-on skills. What started with a few woodworking tools in a garage has grown into an 8,000 square foot facility with over 75 machines and tools.</p><h2>Our Mission</h2><p>To democratize access to tools, technology, and knowledge so that everyone has the power to design, build, repair, and create.</p><h2>Workshop Areas</h2><ul><li><strong>Woodshop:</strong> Table saw, band saw, planer, jointer, router table, hand tools</li><li><strong>Metal Shop:</strong> MIG and TIG welders, plasma cutter, grinders, drill press</li><li><strong>Digital Fab Lab:</strong> Laser cutter, CNC router, 3D printers, vinyl cutter</li><li><strong>Electronics Bench:</strong> Soldering stations, oscilloscopes, power supplies, components</li><li><strong>Textile Studio:</strong> Sewing machines, serger, screen printing, heat press</li></ul>"
+      }
+    },
+    {
+      "id": "page-membership",
+      "type": "node.page",
+      "path": "/membership",
+      "values": {
+        "title": "Membership Information",
+        "body": "<h2>Membership Plans</h2><p>We offer flexible membership options to fit your making needs.</p><ul><li><strong>Day Pass ($25):</strong> Full access for one day. Perfect for trying us out.</li><li><strong>Basic ($75/month):</strong> Open hours access, 10% workshop discount</li><li><strong>Standard ($125/month):</strong> 24/7 access, 20% workshop discount, storage locker</li><li><strong>Family ($175/month):</strong> Standard benefits for up to 4 household members</li></ul><h2>What is Included</h2><p>All memberships include access to shared tools and equipment, WiFi, and community events. Certification workshops for restricted equipment are discounted for members.</p><h2>Safety Requirements</h2><p>All new members complete a safety orientation before using the space. Equipment-specific certifications are required for laser cutters, CNC machines, welding equipment, and other high-risk tools.</p>"
+      }
+    }
+  ]
+}

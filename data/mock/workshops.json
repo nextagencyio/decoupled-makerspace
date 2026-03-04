@@ -1,0 +1,141 @@
+{
+  "data": {
+    "nodeWorkshops": {
+      "__typename": "NodeWorkshopConnection",
+      "nodes": [
+        {
+          "__typename": "NodeWorkshop",
+          "id": "workshop-woodworking",
+          "title": "Introduction to Woodworking",
+          "path": "/workshops/intro-to-woodworking",
+          "body": {
+            "processed": "<p>Learn the fundamentals of woodworking in this hands-on beginner workshop. You will learn to safely operate the table saw, miter saw, drill press, and hand tools while building a solid wood cutting board to take home.</p><h2>What You Will Learn</h2><ul><li>Wood selection and grain direction</li><li>Safe operation of power tools</li><li>Measuring, marking, and cutting techniques</li><li>Gluing, clamping, and finishing</li></ul><p>All materials are included. No experience necessary. Closed-toe shoes required.</p>",
+            "summary": "Learn the fundamentals of woodworking in this hands-on beginner workshop. You will learn to safely operate the table saw, miter saw, drill press, and hand tools while building a solid wood cutting boa"
+          },
+          "workshopDate": {
+            "timestamp": 1776006000
+          },
+          "duration": "4 hours",
+          "skillLevel": "Beginner",
+          "instructorName": "Tom Hendricks",
+          "price": "$75 (members $55)",
+          "maxParticipants": "8",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=80",
+            "alt": "Woodworking workshop with hand tools",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeWorkshop",
+          "id": "workshop-3dprint",
+          "title": "3D Printing Fundamentals",
+          "path": "/workshops/3d-printing-fundamentals",
+          "body": {
+            "processed": "<p>Demystify 3D printing from design to finished object. This workshop covers 3D modeling basics in TinkerCAD and Fusion 360, slicer settings, filament selection, and machine operation. You will design and print your own creation to take home.</p><h2>Topics Covered</h2><ul><li>Overview of FDM and resin printing</li><li>3D modeling with TinkerCAD (beginner-friendly)</li><li>Slicing software and print settings</li><li>Troubleshooting common print failures</li><li>Post-processing and finishing techniques</li></ul><p>Bring a laptop if you have one (we have loaners available).</p>",
+            "summary": "Demystify 3D printing from design to finished object. This workshop covers 3D modeling basics in TinkerCAD and Fusion 360, slicer settings, filament selection, and machine operation. You will design a"
+          },
+          "workshopDate": {
+            "timestamp": 1776621600
+          },
+          "duration": "3 hours",
+          "skillLevel": "Beginner",
+          "instructorName": "Aisha Patel",
+          "price": "$55 (members $40)",
+          "maxParticipants": "10",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+            "alt": "3D printer creating an object",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeWorkshop",
+          "id": "workshop-welding",
+          "title": "MIG Welding Basics",
+          "path": "/workshops/mig-welding-basics",
+          "body": {
+            "processed": "<p>Get hands-on with MIG welding in this introductory workshop. Learn proper safety procedures, machine setup, and fundamental welding techniques. By the end of class, you will be running consistent beads and completing simple joint welds.</p><h2>What to Expect</h2><ul><li>Safety gear fitting and PPE review</li><li>Machine anatomy and setup</li><li>Flat position welding practice</li><li>Butt joints and T-joints</li><li>Grinding and finishing</li></ul><p>All safety equipment and materials provided. Long pants and closed-toe boots required. Minimum age 16.</p>",
+            "summary": "Get hands-on with MIG welding in this introductory workshop. Learn proper safety procedures, machine setup, and fundamental welding techniques. By the end of class, you will be running consistent bead"
+          },
+          "workshopDate": {
+            "timestamp": 1777816800
+          },
+          "duration": "5 hours",
+          "skillLevel": "Beginner",
+          "instructorName": "Carlos Mendez",
+          "price": "$95 (members $75)",
+          "maxParticipants": "6",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+            "alt": "MIG welding sparks",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

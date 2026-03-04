@@ -1,0 +1,431 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "Landing page",
+      "fields": [
+        {
+          "id": "hero_title",
+          "label": "Hero Title",
+          "type": "string"
+        },
+        {
+          "id": "hero_subtitle",
+          "label": "Hero Subtitle",
+          "type": "string"
+        },
+        {
+          "id": "hero_description",
+          "label": "Hero Description",
+          "type": "text"
+        },
+        {
+          "id": "features_items",
+          "label": "Feature Items",
+          "type": "paragraph(feature_item)[]"
+        },
+        {
+          "id": "cta_title",
+          "label": "CTA Title",
+          "type": "string"
+        },
+        {
+          "id": "cta_description",
+          "label": "CTA Description",
+          "type": "text"
+        },
+        {
+          "id": "cta_primary",
+          "label": "CTA Primary",
+          "type": "string"
+        },
+        {
+          "id": "cta_secondary",
+          "label": "CTA Secondary",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "bundle": "workshop",
+      "label": "Workshop",
+      "description": "Hands-on workshop",
+      "body": true,
+      "fields": [
+        {
+          "id": "skill_level",
+          "label": "Skill Level",
+          "type": "string"
+        },
+        {
+          "id": "duration",
+          "label": "Duration",
+          "type": "string"
+        },
+        {
+          "id": "price",
+          "label": "Price",
+          "type": "string"
+        },
+        {
+          "id": "max_participants",
+          "label": "Max Participants",
+          "type": "integer"
+        },
+        {
+          "id": "image",
+          "label": "Image",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "bundle": "equipment",
+      "label": "Equipment",
+      "description": "Available equipment",
+      "body": true,
+      "fields": [
+        {
+          "id": "equipment_category",
+          "label": "Category",
+          "type": "string"
+        },
+        {
+          "id": "image",
+          "label": "Image",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "bundle": "event",
+      "label": "Event",
+      "description": "Community event",
+      "body": true,
+      "fields": [
+        {
+          "id": "event_date",
+          "label": "Event Date",
+          "type": "datetime"
+        },
+        {
+          "id": "location",
+          "label": "Location",
+          "type": "string"
+        },
+        {
+          "id": "image",
+          "label": "Image",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static page",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "feature_item",
+      "label": "Feature Item",
+      "fields": [
+        {
+          "id": "icon",
+          "label": "Icon",
+          "type": "string"
+        },
+        {
+          "id": "title",
+          "label": "Title",
+          "type": "string!"
+        },
+        {
+          "id": "description",
+          "label": "Description",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "id": "f1",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "wrench",
+        "title": "Professional Tools",
+        "description": "CNC routers, laser cutters, 3D printers, welders, and full woodworking and metalworking shops."
+      }
+    },
+    {
+      "id": "f2",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "book-open",
+        "title": "Expert-Led Workshops",
+        "description": "Weekly classes from safety certifications to advanced techniques taught by industry professionals."
+      }
+    },
+    {
+      "id": "f3",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "users",
+        "title": "Collaborative Community",
+        "description": "500+ makers sharing knowledge, tools, and inspiration across disciplines."
+      }
+    },
+    {
+      "id": "f4",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "shield",
+        "title": "Safety First",
+        "description": "Comprehensive safety training, well-maintained equipment, and trained staff always on duty."
+      }
+    },
+    {
+      "id": "f5",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "zap",
+        "title": "Open Access Hours",
+        "description": "Extended access hours for certified members, including evenings and weekends."
+      }
+    },
+    {
+      "id": "f6",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "lightbulb",
+        "title": "Prototype to Product",
+        "description": "Resources to take your idea from concept to prototype to small-batch production."
+      }
+    },
+    {
+      "id": "homepage",
+      "type": "node.homepage",
+      "path": "/homepage",
+      "values": {
+        "title": "Forge Makerspace",
+        "hero_title": "Build Something Amazing",
+        "hero_subtitle": "Forge Makerspace",
+        "hero_description": "<p>A community workshop with professional-grade tools, expert instruction, and the collaborative spirit to bring your ideas to life.</p>",
+        "features_items": [
+          "@f1",
+          "@f2",
+          "@f3",
+          "@f4",
+          "@f5",
+          "@f6"
+        ],
+        "cta_title": "Ready to Make?",
+        "cta_description": "<p>Tour our 15,000 sq ft facility and see what you could create. First workshop is free for new members.</p>",
+        "cta_primary": "Become a Member",
+        "cta_secondary": "View Workshops"
+      }
+    },
+    {
+      "id": "ws-laser",
+      "type": "node.workshop",
+      "path": "/workshops/laser-cutting-101",
+      "values": {
+        "title": "Laser Cutting 101",
+        "body": "<p>Learn to operate our Epilog and Glowforge laser cutters. Cover material selection, file preparation, safety protocols, and your first cut. Leave with a completed project.</p><h2>You Will Learn</h2><ul><li>Machine operation and safety</li><li>Vector file preparation</li><li>Material settings for wood, acrylic, and leather</li><li>Engraving vs cutting techniques</li></ul>",
+        "skill_level": "Beginner",
+        "duration": "3 hours",
+        "price": "$75",
+        "max_participants": 8,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80",
+          "alt": "Laser cutting workshop",
+          "title": "Laser Cutting 101"
+        }
+      }
+    },
+    {
+      "id": "ws-woodwork",
+      "type": "node.workshop",
+      "path": "/workshops/intro-to-woodworking",
+      "values": {
+        "title": "Intro to Woodworking",
+        "body": "<p>A comprehensive introduction to the woodshop. Learn to use the table saw, miter saw, drill press, and hand tools safely. Build a beautiful cutting board to take home.</p>",
+        "skill_level": "Beginner",
+        "duration": "4 hours",
+        "price": "$95",
+        "max_participants": 6,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=80",
+          "alt": "Woodworking workshop",
+          "title": "Intro to Woodworking"
+        }
+      }
+    },
+    {
+      "id": "ws-3dprint",
+      "type": "node.workshop",
+      "path": "/workshops/3d-printing-masterclass",
+      "values": {
+        "title": "3D Printing Masterclass",
+        "body": "<p>Go beyond basic 3D printing. Learn advanced slicer settings, multi-material printing, support strategies, and post-processing techniques for professional results.</p>",
+        "skill_level": "Intermediate",
+        "duration": "3 hours",
+        "price": "$65",
+        "max_participants": 10,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80",
+          "alt": "3D printing workshop",
+          "title": "3D Printing Masterclass"
+        }
+      }
+    },
+    {
+      "id": "ws-welding",
+      "type": "node.workshop",
+      "path": "/workshops/mig-welding-basics",
+      "values": {
+        "title": "MIG Welding Basics",
+        "body": "<p>Get started with MIG welding. Learn setup, safety, bead running, and basic joints. Complete a small welded project by the end of class.</p>",
+        "skill_level": "Beginner",
+        "duration": "4 hours",
+        "price": "$110",
+        "max_participants": 6,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+          "alt": "MIG welding workshop",
+          "title": "MIG Welding Basics"
+        }
+      }
+    },
+    {
+      "id": "equip-laser",
+      "type": "node.equipment",
+      "path": "/equipment/laser-cutters",
+      "values": {
+        "title": "Laser Cutters",
+        "body": "<p>Two Epilog Fusion Pro 48 and one Glowforge Pro. Cut and engrave wood, acrylic, leather, fabric, and more with precision up to 0.001 inches.</p><h2>Specifications</h2><ul><li>Epilog Fusion Pro 48 — 60W CO2, 48\" x 36\" bed</li><li>Glowforge Pro — 45W, camera alignment, passthrough slot</li></ul>",
+        "equipment_category": "Digital Fabrication",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80",
+          "alt": "Laser cutters",
+          "title": "Laser Cutters"
+        }
+      }
+    },
+    {
+      "id": "equip-3d",
+      "type": "node.equipment",
+      "path": "/equipment/3d-printers",
+      "values": {
+        "title": "3D Printers",
+        "body": "<p>Eight 3D printers covering FDM, resin, and multi-material printing. From rapid prototyping to production-quality parts.</p><h2>Available Machines</h2><ul><li>Prusa MK4 (x4) — PLA, PETG, ABS</li><li>Bambu Lab X1 Carbon (x2) — Multi-material</li><li>Formlabs Form 3+ (x2) — Resin SLA</li></ul>",
+        "equipment_category": "Digital Fabrication",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80",
+          "alt": "3D printers",
+          "title": "3D Printers"
+        }
+      }
+    },
+    {
+      "id": "equip-wood",
+      "type": "node.equipment",
+      "path": "/equipment/woodworking-shop",
+      "values": {
+        "title": "Woodworking Shop",
+        "body": "<p>Fully equipped woodshop with professional-grade tools for everything from fine furniture to large construction projects.</p><h2>Available Tools</h2><ul><li>SawStop table saw</li><li>12\" Dewalt miter saw</li><li>Drill press, band saw, scroll saw</li><li>Router table and hand routers</li><li>Complete hand tool collection</li></ul>",
+        "equipment_category": "Woodworking",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=80",
+          "alt": "Woodworking shop",
+          "title": "Woodworking Shop"
+        }
+      }
+    },
+    {
+      "id": "equip-metal",
+      "type": "node.equipment",
+      "path": "/equipment/metalworking-shop",
+      "values": {
+        "title": "Metalworking Shop",
+        "body": "<p>Complete metalworking area with welding stations, plasma cutter, metal lathe, and sheet metal tools.</p><h2>Available Equipment</h2><ul><li>Lincoln MIG welders (x3)</li><li>TIG welder</li><li>Hypertherm plasma cutter</li><li>South Bend metal lathe</li><li>Vertical mill</li></ul>",
+        "equipment_category": "Metalworking",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+          "alt": "Metalworking shop",
+          "title": "Metalworking Shop"
+        }
+      }
+    },
+    {
+      "id": "event-open",
+      "type": "node.event",
+      "path": "/events/open-house",
+      "values": {
+        "title": "Spring Open House",
+        "body": "<p>Tour the entire facility, try out equipment with trained guides, and see what our members have been building. Free admission, refreshments provided.</p>",
+        "event_date": "2026-04-19T10:00:00",
+        "location": "Forge Makerspace — All Areas",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800&q=80",
+          "alt": "Open house",
+          "title": "Spring Open House"
+        }
+      }
+    },
+    {
+      "id": "event-hack",
+      "type": "node.event",
+      "path": "/events/build-a-thon",
+      "values": {
+        "title": "48-Hour Build-a-thon",
+        "body": "<p>Teams of 3-5 compete to design and build a functional prototype in 48 hours. Prizes awarded for creativity, execution, and impact. Open to all skill levels.</p>",
+        "event_date": "2026-05-16T18:00:00",
+        "location": "Forge Makerspace Main Floor",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80",
+          "alt": "Build-a-thon",
+          "title": "Build-a-thon"
+        }
+      }
+    },
+    {
+      "id": "event-repair",
+      "type": "node.event",
+      "path": "/events/repair-cafe",
+      "values": {
+        "title": "Community Repair Cafe",
+        "body": "<p>Bring broken household items and our volunteer fixers will help you repair them for free. Electronics, textiles, furniture, and more. Reduce waste, learn skills.</p>",
+        "event_date": "2026-04-26T11:00:00",
+        "location": "Community Room",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+          "alt": "Repair cafe",
+          "title": "Repair Cafe"
+        }
+      }
+    },
+    {
+      "id": "about",
+      "type": "node.page",
+      "path": "/about",
+      "values": {
+        "title": "About Forge Makerspace",
+        "body": "<p>Forge Makerspace was founded in 2017 by a group of makers, engineers, and artists who believed that access to professional tools and collaborative community could transform ideas into reality.</p><h2>Our Mission</h2><p>To democratize access to fabrication tools and knowledge, empowering people to design, prototype, and build.</p><h2>The Space</h2><p>15,000 sq ft purpose-built facility with dedicated areas for woodworking, metalworking, digital fabrication, electronics, and textiles.</p>"
+      }
+    },
+    {
+      "id": "faq",
+      "type": "node.page",
+      "path": "/faq",
+      "values": {
+        "title": "FAQ",
+        "body": "<h2>Do I need experience?</h2><p>Not at all. We offer beginner workshops for every tool area. Safety certification is required before using certain equipment.</p><h2>What does membership include?</h2><p>Access to the facility during open hours, storage space, member pricing on workshops, and community events.</p><h2>Can I bring my own materials?</h2><p>Yes! We also sell common materials like plywood, acrylic sheets, and filament at competitive prices.</p><h2>Is there storage for projects?</h2><p>All members get a storage shelf. Larger project storage is available for an additional fee.</p>"
+      }
+    }
+  ]
+}
