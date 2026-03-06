@@ -19,28 +19,28 @@
               "__typename": "ParagraphStatItem",
               "id": "stat-members",
               "title": "",
-              "number": "400+",
+              "number": "400+", "value": "400+",
               "label": "Active Members"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-tools",
               "title": "",
-              "number": "75+",
+              "number": "75+", "value": "75+",
               "label": "Tools & Machines"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-workshops",
               "title": "",
-              "number": "100+",
+              "number": "100+", "value": "100+",
               "label": "Annual Workshops"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-sqft",
               "title": "",
-              "number": "8,000",
+              "number": "8,000", "value": "8,000",
               "label": "Sq Ft of Workshop Space"
             }
           ],
