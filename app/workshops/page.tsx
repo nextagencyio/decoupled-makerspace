@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 async function getWorkshops() {
   try {
     const client = getClient()
-    const { data } = await client.raw(GET_WORKSHOPS, { first: 50 })
+    const data = await client.raw(GET_WORKSHOPS, { first: 50 })
     return data?.nodeWorkshops?.nodes || []
   } catch (error) {
     console.error('Error fetching workshops:', error)
@@ -53,7 +53,7 @@ export default async function WorkshopsPage() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {items.map((item) => (<WorkshopCard key={item.id} item={item} />))}
+              {items.map((item: any) => (<WorkshopCard key={item.id} item={item} />))}
             </div>
           )}
         </div>
