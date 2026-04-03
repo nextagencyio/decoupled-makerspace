@@ -17,7 +17,7 @@ async function getEquipments() {
   try {
     const client = getClient()
     const data = await client.raw(GET_EQUIPMENTS, { first: 50 })
-    return data?.nodeEquipments?.nodes || []
+    return data?.nodeEquipmentItems?.nodes || data?.nodeEquipments?.nodes || []
   } catch (error) {
     console.error('Error fetching equipments:', error)
     return []

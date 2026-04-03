@@ -63,8 +63,6 @@ export interface DrupalHomepage extends DrupalNode {
   heroDescription?: {
     processed: string
   }
-  featuresTitle?: string
-  featuresSubtitle?: string
   featuresItems?: DrupalFeature[]
   ctaTitle?: string
   ctaDescription?: {
@@ -96,12 +94,10 @@ export interface DrupalWorkshop {
   title: string
   path?: string
   body?: { processed: string; summary?: string }
-  workshopDate?: { timestamp: string }
   duration?: string
   skillLevel?: string
-  instructorName?: string
   price?: string
-  maxParticipants?: string
+  maxParticipants?: number
   image?: { url: string; alt: string; width?: number; height?: number; variations?: { name: string; url: string; width: number; height: number }[] }
 }
 
@@ -117,14 +113,11 @@ export interface DrupalEquipment {
   path?: string
   body?: { processed: string; summary?: string }
   equipmentCategory?: string
-  brandModel?: string
-  certificationRequired?: string
-  availabilityHours?: string
   image?: { url: string; alt: string; width?: number; height?: number; variations?: { name: string; url: string; width: number; height: number }[] }
 }
 
 export interface EquipmentsData {
-  nodeEquipments: {
+  nodeEquipmentItems: {
     nodes: DrupalEquipment[]
   }
 }
@@ -135,9 +128,7 @@ export interface DrupalEvent {
   path?: string
   body?: { processed: string; summary?: string }
   eventDate?: { timestamp: string }
-  endDate?: { timestamp: string }
   location?: string
-  openToPublic?: string
   image?: { url: string; alt: string; width?: number; height?: number; variations?: { name: string; url: string; width: number; height: number }[] }
 }
 

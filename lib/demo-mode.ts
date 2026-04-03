@@ -52,7 +52,7 @@ export function handleMockQuery(body: string): any {
       return loadMockData('workshops.json')
     }
 
-    if (query.includes('GetEquipments') || query.includes('nodeEquipments')) {
+    if (query.includes('GetEquipments') || query.includes('nodeEquipments') || query.includes('nodeEquipmentItems')) {
       return loadMockData('equipment.json')
     }
 

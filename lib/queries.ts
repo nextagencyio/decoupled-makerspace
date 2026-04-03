@@ -82,11 +82,12 @@ export const GET_HOMEPAGE_DATA = gql`
         path
         heroTitle
         heroSubtitle
-        heroDescription { processed summary }
-        statsItems { ... on ParagraphStatItem { id title description { processed } icon } }
-        featuredItemsTitle
+        heroDescription { processed }
+        featuresItems {
+          ... on ParagraphFeatureItem { id title description { processed } icon }
+        }
         ctaTitle
-        ctaDescription { processed summary }
+        ctaDescription { processed }
         ctaPrimary
         ctaSecondary
       }
@@ -100,6 +101,7 @@ export const GET_NODE_BY_PATH = gql`
       ... on RouteInternal {
         entity {
           ... on NodePage {
+            __typename
             id
             title
             body {
@@ -132,6 +134,7 @@ export const GET_NODE_BY_PATH = gql`
             }
           }
           ... on NodeHomepage {
+            __typename
             id
             title
             heroTitle
@@ -139,8 +142,6 @@ export const GET_NODE_BY_PATH = gql`
             heroDescription {
               processed
             }
-            featuresTitle
-            featuresSubtitle
             featuresItems {
               ... on ParagraphFeatureItem {
                 id
@@ -158,6 +159,37 @@ export const GET_NODE_BY_PATH = gql`
             ctaPrimary
             ctaSecondary
           }
+          ... on NodeWorkshop {
+            __typename
+            id
+            title
+            path
+            body { processed summary }
+            duration
+            skillLevel
+            price
+            maxParticipants
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
+          }
+          ... on NodeEquipment {
+            __typename
+            id
+            title
+            path
+            body { processed summary }
+            equipmentCategory
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
+          }
+          ... on NodeEvent {
+            __typename
+            id
+            title
+            path
+            body { processed summary }
+            eventDate { timestamp }
+            location
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
+          }
         }
       }
     }
@@ -174,10 +206,8 @@ export const GET_WORKSHOPS = gql`
         created { timestamp }
         ... on NodeWorkshop {
           body { processed summary }
-          workshopDate { timestamp }
           duration
           skillLevel
-          instructorName
           price
           maxParticipants
           image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
@@ -196,14 +226,12 @@ export const GET_WORKSHOP_BY_PATH = gql`
             id
             title
             path
-          body { processed summary }
-          workshopDate { timestamp }
-          duration
-          skillLevel
-          instructorName
-          price
-          maxParticipants
-          image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
+            body { processed summary }
+            duration
+            skillLevel
+            price
+            maxParticipants
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
           }
         }
       }
@@ -213,7 +241,7 @@ export const GET_WORKSHOP_BY_PATH = gql`
 
 export const GET_EQUIPMENTS = gql`
   query GetEquipments($first: Int = 10) {
-    nodeEquipments(first: $first, sortKey: CREATED_AT) {
+    nodeEquipmentItems(first: $first, sortKey: CREATED_AT) {
       nodes {
         id
         title
@@ -222,9 +250,6 @@ export const GET_EQUIPMENTS = gql`
         ... on NodeEquipment {
           body { processed summary }
           equipmentCategory
-          brandModel
-          certificationRequired
-          availabilityHours
           image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
         }
       }
@@ -241,12 +266,9 @@ export const GET_EQUIPMENT_BY_PATH = gql`
             id
             title
             path
-          body { processed summary }
-          equipmentCategory
-          brandModel
-          certificationRequired
-          availabilityHours
-          image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
+            body { processed summary }
+            equipmentCategory
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
           }
         }
       }
@@ -265,9 +287,7 @@ export const GET_EVENTS = gql`
         ... on NodeEvent {
           body { processed summary }
           eventDate { timestamp }
-          endDate { timestamp }
           location
-          openToPublic
           image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
         }
       }
@@ -284,12 +304,10 @@ export const GET_EVENT_BY_PATH = gql`
             id
             title
             path
-          body { processed summary }
-          eventDate { timestamp }
-          endDate { timestamp }
-          location
-          openToPublic
-          image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
+            body { processed summary }
+            eventDate { timestamp }
+            location
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
           }
         }
       }

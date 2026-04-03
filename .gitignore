@@ -1,5 +1,9 @@
 # Dependencies
 /node_modules
+
+# Playwright
+test-results/
+playwright-report/
 /.pnp
 .pnp.js
 .yarn/install-state.gz
